@@ -53,7 +53,7 @@ class UserTasks(TaskSet):
             print("best practice url---------------------", best_practice_url)
             #assert self.best_practice_page_title.search(str(supr.title)) is not None, "expected title not found"
             assert resp.status_code is 200, "Unexpected response code"
-            assert resp.elapsed < timedelta(seconds = 2), "Request took more than 2 sec"
+            assert resp.elapsed < timedelta(seconds = 3), "Request took more than 3 sec"
             
             #---------------------download page --------------------
             
