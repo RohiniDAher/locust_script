@@ -74,7 +74,7 @@ class UserTasks(TaskSet):
             print("download page title-------------", s1.title)
                         
             script_data = str(s1.find_all('script')[20].text)
-            #print("-------------------------------------------")
+            
             #print(script_data)
             session_id = script_data.rfind('sessionId')
             id = script_data[session_id+12: session_id+17]
