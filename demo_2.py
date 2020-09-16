@@ -114,7 +114,6 @@ class UserTasks(TaskSet):
             close_sess = self.client.post(close_session_api, data={"testsession_id":id, "app_version":"2.76.0.0211"}, headers=config_header, name="close session")
             print("close session --------------", close_sess.status_code)
             assert close_sess.status_code is 200, "Unexpected response code"
-            
             '''
             chunk_upload_done_api = "/screencasts/session/self/chunkupload/done/"
             chunk_upload = self.client.post(chunk_upload_done_api, data={"testsession_id":id, "app_version":"2.76.0.0211"}, headers=config_header, name="chunk upload done")
